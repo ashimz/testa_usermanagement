@@ -1,0 +1,38 @@
+server:
+  port: 9092
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testa_sdb
+    username: testa
+    password: admin123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  application:
+    name: User Management
+  jpa:
+    hibernate:
+      ddl-auto : none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:9091/oauth/check_token
+    client:
+      client-id: mobile
+      client-secret: admin123
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace

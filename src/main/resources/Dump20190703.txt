@@ -1,0 +1,384 @@
+CREATE DATABASE  IF NOT EXISTS `testa_sdb` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `testa_sdb`;
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: testa_sdb
+-- ------------------------------------------------------
+-- Server version	5.7.25-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `oauth_access_token`
+--
+
+DROP TABLE IF EXISTS `oauth_access_token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_access_token` (
+  `token_id` varchar(256) DEFAULT NULL,
+  `token` mediumblob,
+  `authentication_id` varchar(256) NOT NULL,
+  `user_name` varchar(256) DEFAULT NULL,
+  `client_id` varchar(256) DEFAULT NULL,
+  `authentication` mediumblob,
+  `refresh_token` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`authentication_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_access_token`
+--
+
+LOCK TABLES `oauth_access_token` WRITE;
+/*!40000 ALTER TABLE `oauth_access_token` DISABLE KEYS */;
+INSERT INTO `oauth_access_token` VALUES ('6f4bfe75ca45f1cde7a18544a35ff82d','¨\Ì\0sr\0Corg.springframework.security.oauth2.common.DefaultOAuth2AccessToken≤û6$˙\Œ\0L\0additionalInformationt\0Ljava/util/Map;L\0\nexpirationt\0Ljava/util/Date;L\0refreshTokent\0?Lorg/springframework/security/oauth2/common/OAuth2RefreshToken;L\0scopet\0Ljava/util/Set;L\0	tokenTypet\0Ljava/lang/String;L\0valueq\0~\0xpsr\0java.util.Collections$EmptyMapY6ÖZ\‹\Á\–\0\0xpsr\0java.util.DatehjÅKYt\0\0xpw\0\0k∂aGøxsr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationq\0~\0xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valueq\0~\0xpt\0$ea22986c-98b9-4dda-8af7-14eb9c50e906sq\0~\0	w\0\0k∂âO\»xsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0ct\0Ljava/util/Collection;xpsr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExt\0bearert\0$1c17a819-4f3c-4c73-b14a-9cc877ab8974','0bd3d83e0a35dd4c15a8fcd6603900c0','user','mobile','¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0\0w\0\0\0\0xq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUrit\0Ljava/lang/String;L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0L\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0xpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0userxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0 w\0\0\0?@\0\0\0\0\0\0xsq\0~\0?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0 w\0\0\0?@\0\0\0\0\0t\0paymentt\0	inventoryxsq\0~\0 w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0\0w\0\0\0\0xq\0~\0-sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0q\0~\0\Zq\0~\0q\0~\0x\0psr\00khaliscode.testa_authserver.model.AuthUserDetailqs-Ç@\‡\0\0xr\0&khaliscode.testa_authserver.model.User∫§TX≈±x\0	Z\0accountNonExpiredZ\0accountNonLockedZ\0credentialsNonExpiredZ\0enabledL\0emailq\0~\0L\0idt\0Ljava/lang/Integer;L\0passwordq\0~\0L\0rolesq\0~\0L\0usernameq\0~\0xpt\0user@gmail.compt\0D{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6sr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollectionW∑]ä∫sT\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\08xp\0ˇˇˇˇ\0\0\0sr\0java.lang.Integer‚†§˜Åá8\0I\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0sq\0~\01q\0~\04q\0~\0<q\0~\05q\0~\09t\0usert\0,khaliscode.testa_authserver.model.User.rolespsq\0~\0\0\0\0\0w\0\0\0\0xsq\0~\0\0\0\0\0w\0\0\0\0xq\0~\0>','24dcea76b75cb80e4f22641d23fd48c8'),('d23c99ccf71cc12899a6c2fc2d4725ab','¨\Ì\0sr\0Corg.springframework.security.oauth2.common.DefaultOAuth2AccessToken≤û6$˙\Œ\0L\0additionalInformationt\0Ljava/util/Map;L\0\nexpirationt\0Ljava/util/Date;L\0refreshTokent\0?Lorg/springframework/security/oauth2/common/OAuth2RefreshToken;L\0scopet\0Ljava/util/Set;L\0	tokenTypet\0Ljava/lang/String;L\0valueq\0~\0xpsr\0java.util.Collections$EmptyMapY6ÖZ\‹\Á\–\0\0xpsr\0java.util.DatehjÅKYt\0\0xpw\0\0k∂Gè.xsr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationq\0~\0xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valueq\0~\0xpt\0$3df907a2-4bde-4ecf-b591-53585e42df0asq\0~\0	w\0\0k∂3\ÿxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0ct\0Ljava/util/Collection;xpsr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExt\0bearert\0$c77d2f8a-1a30-4468-8ec1-d4b263b4798f','2f8640eb4e7d5f4896b1d9e084b078ff','khalis','mobile','¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0˛\0L\0rolet\0Ljava/lang/String;xpt\0\nROLE_adminsq\0~\0\rt\0create_profilesq\0~\0\rt\0read_profilesq\0~\0\rt\0update_profilesq\0~\0\rt\0delete_profilexq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0\ZL\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0\Zxpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0khalisxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0+w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\"?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0+w\0\0\0?@\0\0\0\0\0t\0paymentt\0	inventoryxsq\0~\0+w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0q\0~\0xq\0~\08sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0\"?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0$q\0~\0%q\0~\0&q\0~\0\'x\0psr\00khaliscode.testa_authserver.model.AuthUserDetailqs-Ç@\‡\0\0xr\0&khaliscode.testa_authserver.model.User∫§TX≈±x\0	Z\0accountNonExpiredZ\0accountNonLockedZ\0credentialsNonExpiredZ\0enabledL\0emailq\0~\0L\0idt\0Ljava/lang/Integer;L\0passwordq\0~\0L\0rolesq\0~\0L\0usernameq\0~\0xpt\0khalis.ict@gmail.compt\0D{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6sr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollectionW∑]ä∫sT\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0Cxp\0ˇˇˇˇ\0\0\0sr\0java.lang.Integer‚†§˜Åá8\0I\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0sq\0~\0<q\0~\0?q\0~\0Gq\0~\0@q\0~\0Dt\0khalist\0,khaliscode.testa_authserver.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0&khaliscode.testa_authserver.model.RoleôM;\\Æ´\0L\0idq\0~\0=L\0nameq\0~\0L\0permissionsq\0~\0xpq\0~\0Gq\0~\0sq\0~\0A\0ˇˇˇˇ\0\0\0q\0~\0Gq\0~\0Mt\02khaliscode.testa_authserver.model.Role.permissionspsq\0~\0\0\0\0w\0\0\0sr\0,khaliscode.testa_authserver.model.Permission±\À\'\"\‚0\‰\¬\0L\0idq\0~\0=L\0nameq\0~\0xpq\0~\0Gq\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Rq\0~\0Sq\0~\0Uq\0~\0Wxxsq\0~\0\0\0\0w\0\0\0q\0~\0Mxq\0~\0I','c5f7ae9f32c25fccfff988b07d7cdbff');
+/*!40000 ALTER TABLE `oauth_access_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_approvals`
+--
+
+DROP TABLE IF EXISTS `oauth_approvals`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_approvals` (
+  `userId` varchar(256) DEFAULT NULL,
+  `clientId` varchar(256) DEFAULT NULL,
+  `scope` varchar(256) DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL,
+  `expiresAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `lastModifiedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_approvals`
+--
+
+LOCK TABLES `oauth_approvals` WRITE;
+/*!40000 ALTER TABLE `oauth_approvals` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_approvals` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_client_details`
+--
+
+DROP TABLE IF EXISTS `oauth_client_details`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_client_details` (
+  `client_id` varchar(255) NOT NULL,
+  `client_secret` varchar(255) NOT NULL,
+  `web_server_redirect_uri` varchar(2048) DEFAULT NULL,
+  `scope` varchar(255) DEFAULT NULL,
+  `access_token_validity` int(11) DEFAULT NULL,
+  `refresh_token_validity` int(11) DEFAULT NULL,
+  `resource_ids` varchar(1024) DEFAULT NULL,
+  `authorized_grant_types` varchar(1024) DEFAULT NULL,
+  `authorities` varchar(1024) DEFAULT NULL,
+  `additional_information` varchar(4096) DEFAULT NULL,
+  `autoapprove` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_client_details`
+--
+
+LOCK TABLES `oauth_client_details` WRITE;
+/*!40000 ALTER TABLE `oauth_client_details` DISABLE KEYS */;
+INSERT INTO `oauth_client_details` VALUES ('mobile','{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6','http://localhost:8080/code','READ,WRITE',3600,10000,'inventory,payment','authorization_code,password,refresh_token,implicit',NULL,'{}',NULL);
+/*!40000 ALTER TABLE `oauth_client_details` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_client_token`
+--
+
+DROP TABLE IF EXISTS `oauth_client_token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_client_token` (
+  `token_id` varchar(256) DEFAULT NULL,
+  `token` mediumblob,
+  `authentication_id` varchar(256) NOT NULL,
+  `user_name` varchar(256) DEFAULT NULL,
+  `client_id` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`authentication_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_client_token`
+--
+
+LOCK TABLES `oauth_client_token` WRITE;
+/*!40000 ALTER TABLE `oauth_client_token` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_client_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_code`
+--
+
+DROP TABLE IF EXISTS `oauth_code`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_code` (
+  `code` varchar(256) DEFAULT NULL,
+  `authentication` mediumblob
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_code`
+--
+
+LOCK TABLES `oauth_code` WRITE;
+/*!40000 ALTER TABLE `oauth_code` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_code` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_permission`
+--
+
+DROP TABLE IF EXISTS `oauth_permission`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_permission` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(512) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_permission`
+--
+
+LOCK TABLES `oauth_permission` WRITE;
+/*!40000 ALTER TABLE `oauth_permission` DISABLE KEYS */;
+INSERT INTO `oauth_permission` VALUES (1,'create_profile'),(4,'delete_profile'),(2,'read_profile'),(3,'update_profile');
+/*!40000 ALTER TABLE `oauth_permission` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_permission_role`
+--
+
+DROP TABLE IF EXISTS `oauth_permission_role`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_permission_role` (
+  `permission_id` int(11) DEFAULT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  KEY `permission_id` (`permission_id`),
+  KEY `role_id` (`role_id`),
+  CONSTRAINT `oauth_permission_role_ibfk_1` FOREIGN KEY (`permission_id`) REFERENCES `oauth_permission` (`id`),
+  CONSTRAINT `oauth_permission_role_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `oauth_role` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_permission_role`
+--
+
+LOCK TABLES `oauth_permission_role` WRITE;
+/*!40000 ALTER TABLE `oauth_permission_role` DISABLE KEYS */;
+INSERT INTO `oauth_permission_role` VALUES (1,1),(2,1),(3,1),(4,1),(2,2),(3,2);
+/*!40000 ALTER TABLE `oauth_permission_role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_refresh_token`
+--
+
+DROP TABLE IF EXISTS `oauth_refresh_token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_refresh_token` (
+  `token_id` varchar(256) DEFAULT NULL,
+  `token` mediumblob,
+  `authentication` mediumblob
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_refresh_token`
+--
+
+LOCK TABLES `oauth_refresh_token` WRITE;
+/*!40000 ALTER TABLE `oauth_refresh_token` DISABLE KEYS */;
+INSERT INTO `oauth_refresh_token` VALUES ('dda52207e585e6ea3d228c18604e74f5','¬¨√≠\0sr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/√üGc¬ùƒû√â¬∑\0L\0\nexpirationt\0Ljava/util/Date;xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens√°\ncT√î^\0L\0valuet\0Ljava/lang/String;xpt\0$1caecd62-d121-423d-b106-e73bdb18ce67sr\0java.util.Datehj¬ÅKYt\0\0xpw\0\0k¬≤Q√á¬©x','¬¨√≠\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2Authentication¬Ω@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken√ì¬™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList√º%1¬µ√¨¬é\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0¬Ä√ã^√∑\0L\0cq\0~\0xpsr\0java.util.ArrayListx¬Å√í¬ô√áa¬ù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0≈ü\0L\0rolet\0Ljava/lang/String;xpt\0\nROLE_adminsq\0~\0\rt\0create_profilesq\0~\0\rt\0read_profilesq\0~\0\rt\0update_profilesq\0~\0\rt\0delete_profilexq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>¬£qi¬Ω\0L\0clientIdq\0~\0L\0requestParametersq\0~\0\ZL\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMap√±¬•¬®≈üt√µB\0L\0mq\0~\0\Zxpsr\0java.util.HashMap√ö√Å√É`√ë\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0khalisxsr\0%java.util.Collections$UnmodifiableSet¬Ä¬í√ë¬è¬õ¬ÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet√òl√óZ¬ïƒ∞*\0\0xr\0java.util.HashSet¬∫D¬Ö¬ï¬ñ¬∏¬∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0+w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\"?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0+w\0\0\0?@\0\0\0\0\0t\0paymentt\0	inventoryxsq\0~\0+w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0≈ü\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0q\0~\0xq\0~\08sr\0java.util.LinkedHashMap4√ÄN\\l√Ä√ª\0Z\0accessOrderxq\0~\0\"?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0$q\0~\0%q\0~\0&q\0~\0\'x\0psr\03khaliscode.Test_ServerAuthDB01.model.AuthUserDetail¬ñ¬Ø¬∑2¬å&√ø\0\0xr\0)khaliscode.Test_ServerAuthDB01.model.UserM0|=√ëxG√∏\0	Z\0accountNonExpiredZ\0accountNonLockedZ\0credentialsNonExpiredZ\0enabledL\0emailq\0~\0L\0idt\0Ljava/lang/Integer;L\0passwordq\0~\0L\0rolesq\0~\0L\0usernameq\0~\0xpt\0khalis.ict@gmail.compt\0D{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6sr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ ¬è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollectionW¬∑]¬ä¬∫sT\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0Cxp\0√ø√ø√ø√ø\0\0\0sr\0java.lang.Integer√¢¬†¬§√∑¬Å¬á8\0I\0valuexr\0java.lang.Number¬Ü¬¨¬ï¬î√†¬ã\0\0xp\0\0\0sq\0~\0<q\0~\0?q\0~\0Gq\0~\0@q\0~\0Dt\0khalist\0/khaliscode.Test_ServerAuthDB01.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0)khaliscode.Test_ServerAuthDB01.model.Role√§¬ã^√Ü¬ª¬í¬º¬Ç\0L\0idq\0~\0=L\0nameq\0~\0L\0permissionsq\0~\0xpq\0~\0Gq\0~\0sq\0~\0A\0√ø√ø√ø√ø\0\0\0q\0~\0Gq\0~\0Mt\05khaliscode.Test_ServerAuthDB01.model.Role.permissionspsq\0~\0\0\0\0w\0\0\0sr\0/khaliscode.Test_ServerAuthDB01.model.Permission√Çw¬Ñp2¬≠\0L\0idq\0~\0=L\0nameq\0~\0xpq\0~\0Gq\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Rq\0~\0Sq\0~\0Uq\0~\0Wxxsq\0~\0\0\0\0w\0\0\0q\0~\0Mxq\0~\0I'),('c5f7ae9f32c25fccfff988b07d7cdbff','¨\Ì\0sr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationt\0Ljava/util/Date;xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valuet\0Ljava/lang/String;xpt\0$3df907a2-4bde-4ecf-b591-53585e42df0asr\0java.util.DatehjÅKYt\0\0xpw\0\0k∂3\ÿx','¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0w\0\0\0sr\0Borg.springframework.security.core.authority.SimpleGrantedAuthority\0\0\0\0\0\0˛\0L\0rolet\0Ljava/lang/String;xpt\0\nROLE_adminsq\0~\0\rt\0create_profilesq\0~\0\rt\0read_profilesq\0~\0\rt\0update_profilesq\0~\0\rt\0delete_profilexq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUriq\0~\0L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0\ZL\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0\Zxpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0khalisxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0+w\0\0\0?@\0\0\0\0\0\0xsq\0~\0\"?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0+w\0\0\0?@\0\0\0\0\0t\0paymentt\0	inventoryxsq\0~\0+w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0w\0\0\0q\0~\0q\0~\0q\0~\0q\0~\0q\0~\0xq\0~\08sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0\"?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0$q\0~\0%q\0~\0&q\0~\0\'x\0psr\00khaliscode.testa_authserver.model.AuthUserDetailqs-Ç@\‡\0\0xr\0&khaliscode.testa_authserver.model.User∫§TX≈±x\0	Z\0accountNonExpiredZ\0accountNonLockedZ\0credentialsNonExpiredZ\0enabledL\0emailq\0~\0L\0idt\0Ljava/lang/Integer;L\0passwordq\0~\0L\0rolesq\0~\0L\0usernameq\0~\0xpt\0khalis.ict@gmail.compt\0D{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6sr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollectionW∑]ä∫sT\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\0Cxp\0ˇˇˇˇ\0\0\0sr\0java.lang.Integer‚†§˜Åá8\0I\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0sq\0~\0<q\0~\0?q\0~\0Gq\0~\0@q\0~\0Dt\0khalist\0,khaliscode.testa_authserver.model.User.rolespsq\0~\0\0\0\0w\0\0\0sr\0&khaliscode.testa_authserver.model.RoleôM;\\Æ´\0L\0idq\0~\0=L\0nameq\0~\0L\0permissionsq\0~\0xpq\0~\0Gq\0~\0sq\0~\0A\0ˇˇˇˇ\0\0\0q\0~\0Gq\0~\0Mt\02khaliscode.testa_authserver.model.Role.permissionspsq\0~\0\0\0\0w\0\0\0sr\0,khaliscode.testa_authserver.model.Permission±\À\'\"\‚0\‰\¬\0L\0idq\0~\0=L\0nameq\0~\0xpq\0~\0Gq\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0sq\0~\0Qsq\0~\0E\0\0\0q\0~\0xsq\0~\0\0\0\0w\0\0\0q\0~\0Rq\0~\0Sq\0~\0Uq\0~\0Wxxsq\0~\0\0\0\0w\0\0\0q\0~\0Mxq\0~\0I'),('24dcea76b75cb80e4f22641d23fd48c8','¨\Ì\0sr\0Lorg.springframework.security.oauth2.common.DefaultExpiringOAuth2RefreshToken/\ﬂGcù\–…∑\0L\0\nexpirationt\0Ljava/util/Date;xr\0Dorg.springframework.security.oauth2.common.DefaultOAuth2RefreshTokens\·\ncT\‘^\0L\0valuet\0Ljava/lang/String;xpt\0$ea22986c-98b9-4dda-8af7-14eb9c50e906sr\0java.util.DatehjÅKYt\0\0xpw\0\0k∂âO\»x','¨\Ì\0sr\0Aorg.springframework.security.oauth2.provider.OAuth2AuthenticationΩ@bR\0L\0\rstoredRequestt\0<Lorg/springframework/security/oauth2/provider/OAuth2Request;L\0userAuthenticationt\02Lorg/springframework/security/core/Authentication;xr\0Gorg.springframework.security.authentication.AbstractAuthenticationToken”™(~nGd\0Z\0\rauthenticatedL\0authoritiest\0Ljava/util/Collection;L\0detailst\0Ljava/lang/Object;xp\0sr\0&java.util.Collections$UnmodifiableList¸%1µ\Ïé\0L\0listt\0Ljava/util/List;xr\0,java.util.Collections$UnmodifiableCollectionB\0Ä\À^˜\0L\0cq\0~\0xpsr\0java.util.ArrayListxÅ\“ô\«aù\0I\0sizexp\0\0\0\0w\0\0\0\0xq\0~\0psr\0:org.springframework.security.oauth2.provider.OAuth2Request\0\0\0\0\0\0\0\0Z\0approvedL\0authoritiesq\0~\0L\0\nextensionst\0Ljava/util/Map;L\0redirectUrit\0Ljava/lang/String;L\0refresht\0;Lorg/springframework/security/oauth2/provider/TokenRequest;L\0resourceIdst\0Ljava/util/Set;L\0\rresponseTypesq\0~\0xr\08org.springframework.security.oauth2.provider.BaseRequest6(z>£qiΩ\0L\0clientIdq\0~\0L\0requestParametersq\0~\0L\0scopeq\0~\0xpt\0mobilesr\0%java.util.Collections$UnmodifiableMapÒ•®˛tıB\0L\0mq\0~\0xpsr\0java.util.HashMap\⁄¡\√`\—\0F\0\nloadFactorI\0	thresholdxp?@\0\0\0\0\0w\0\0\0\0\0\0t\0\ngrant_typet\0passwordt\0usernamet\0userxsr\0%java.util.Collections$UnmodifiableSetÄí—èõÄU\0\0xq\0~\0	sr\0java.util.LinkedHashSet\ÿl\◊Zï\›*\0\0xr\0java.util.HashSet∫DÖïñ∏∑4\0\0xpw\0\0\0?@\0\0\0\0\0t\0READt\0WRITExsq\0~\0 w\0\0\0?@\0\0\0\0\0\0xsq\0~\0?@\0\0\0\0\0\0w\0\0\0\0\0\0\0xppsq\0~\0 w\0\0\0?@\0\0\0\0\0t\0paymentt\0	inventoryxsq\0~\0 w\0\0\0?@\0\0\0\0\0\0xsr\0Oorg.springframework.security.authentication.UsernamePasswordAuthenticationToken\0\0\0\0\0\0˛\0L\0credentialsq\0~\0L\0	principalq\0~\0xq\0~\0sq\0~\0sq\0~\0\0\0\0\0w\0\0\0\0xq\0~\0-sr\0java.util.LinkedHashMap4¿N\\l¿˚\0Z\0accessOrderxq\0~\0?@\0\0\0\0\0w\0\0\0\0\0\0q\0~\0q\0~\0\Zq\0~\0q\0~\0x\0psr\00khaliscode.testa_authserver.model.AuthUserDetailqs-Ç@\‡\0\0xr\0&khaliscode.testa_authserver.model.User∫§TX≈±x\0	Z\0accountNonExpiredZ\0accountNonLockedZ\0credentialsNonExpiredZ\0enabledL\0emailq\0~\0L\0idt\0Ljava/lang/Integer;L\0passwordq\0~\0L\0rolesq\0~\0L\0usernameq\0~\0xpt\0user@gmail.compt\0D{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6sr\0/org.hibernate.collection.internal.PersistentBag>j\r0I_ è\0L\0bagq\0~\0xr\0>org.hibernate.collection.internal.AbstractPersistentCollectionW∑]ä∫sT\0Z\0allowLoadOutsideTransactionI\0\ncachedSizeZ\0dirtyZ\0elementRemovedZ\0initializedZ\0\risTempSessionL\0keyt\0Ljava/io/Serializable;L\0ownerq\0~\0L\0roleq\0~\0L\0sessionFactoryUuidq\0~\0L\0storedSnapshotq\0~\08xp\0ˇˇˇˇ\0\0\0sr\0java.lang.Integer‚†§˜Åá8\0I\0valuexr\0java.lang.NumberÜ¨ïî\‡ã\0\0xp\0\0\0sq\0~\01q\0~\04q\0~\0<q\0~\05q\0~\09t\0usert\0,khaliscode.testa_authserver.model.User.rolespsq\0~\0\0\0\0\0w\0\0\0\0xsq\0~\0\0\0\0\0w\0\0\0\0xq\0~\0>');
+/*!40000 ALTER TABLE `oauth_refresh_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_role`
+--
+
+DROP TABLE IF EXISTS `oauth_role`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_role`
+--
+
+LOCK TABLES `oauth_role` WRITE;
+/*!40000 ALTER TABLE `oauth_role` DISABLE KEYS */;
+INSERT INTO `oauth_role` VALUES (1,'ROLE_admin'),(2,'ROLE_operator');
+/*!40000 ALTER TABLE `oauth_role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_role_user`
+--
+
+DROP TABLE IF EXISTS `oauth_role_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_role_user` (
+  `role_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  KEY `role_id` (`role_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `oauth_role_user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `oauth_role` (`id`),
+  CONSTRAINT `oauth_role_user_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `oauth_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_role_user`
+--
+
+LOCK TABLES `oauth_role_user` WRITE;
+/*!40000 ALTER TABLE `oauth_role_user` DISABLE KEYS */;
+INSERT INTO `oauth_role_user` VALUES (1,1),(2,2);
+/*!40000 ALTER TABLE `oauth_role_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `oauth_user`
+--
+
+DROP TABLE IF EXISTS `oauth_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `oauth_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(1024) NOT NULL,
+  `email` varchar(1024) NOT NULL,
+  `enabled` tinyint(4) NOT NULL,
+  `accountNonExpired` tinyint(4) NOT NULL,
+  `credentialsNonExpired` tinyint(4) NOT NULL,
+  `accountNonLocked` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `oauth_user`
+--
+
+LOCK TABLES `oauth_user` WRITE;
+/*!40000 ALTER TABLE `oauth_user` DISABLE KEYS */;
+INSERT INTO `oauth_user` VALUES (1,'khalis','{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6','khalis.ict@gmail.com',1,1,1,1),(2,'khaliscode','{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6','khaliscode@gmail.com',1,1,1,1),(3,'user','{bcrypt}$2a$10$8pWLtrPW9xjYddeZ7cEBqedAucaCed5/1/HNLeNabwAjYrxSc4kF6','user@gmail.com',1,1,1,1);
+/*!40000 ALTER TABLE `oauth_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_main`
+--
+
+DROP TABLE IF EXISTS `user_main`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_main` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(300) DEFAULT NULL,
+  `user_ic` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `user_id_UNIQUE` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_main`
+--
+
+LOCK TABLES `user_main` WRITE;
+/*!40000 ALTER TABLE `user_main` DISABLE KEYS */;
+INSERT INTO `user_main` VALUES (1,'khalis','901025145213'),(2,'khalis_a','111111111111'),(3,'khalis_b','2222222222222'),(4,'test','123');
+/*!40000 ALTER TABLE `user_main` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `vault`
+--
+
+DROP TABLE IF EXISTS `vault`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `vault` (
+  `vault_id` int(11) NOT NULL AUTO_INCREMENT,
+  `vault_name` varchar(255) DEFAULT NULL,
+  `vault_password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`vault_id`),
+  UNIQUE KEY `vault_id_UNIQUE` (`vault_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `vault`
+--
+
+LOCK TABLES `vault` WRITE;
+/*!40000 ALTER TABLE `vault` DISABLE KEYS */;
+INSERT INTO `vault` VALUES (1,'khalis','$2a$10$YitBtmNs1fdZ6.l0eAOWDeyhja/3nCZChqTGgZWy.Uypqp3YzEeBG'),(2,'khalis_a','$2a$10$YitBtmNs1fdZ6.l0eAOWDeyhja/3nCZChqTGgZWy.Uypqp3YzEeBG'),(3,'user','$2a$10$YitBtmNs1fdZ6.l0eAOWDeyhja/3nCZChqTGgZWy.Uypqp3YzEeBG');
+/*!40000 ALTER TABLE `vault` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping events for database 'testa_sdb'
+--
+
+--
+-- Dumping routines for database 'testa_sdb'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-07-03 14:00:05
